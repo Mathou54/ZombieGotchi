@@ -19,7 +19,7 @@ before_install:
 
 script:
   - npm test -- --single-run
-  - npm build -- --aot --prod
+  - npm run build -- --aot --prod
 
 deploy:
   provider: heroku
