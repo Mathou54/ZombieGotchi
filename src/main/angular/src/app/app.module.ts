@@ -4,10 +4,16 @@ import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 
 import {AppComponent} from "./app.component";
+import {ZombiegotchiComponent} from "./components/zombiegotchi/zombiegotchi.component";
+import {ZombieComponent} from "./components/zombiegotchi/zombie/zombie.component";
+import {ControlsComponent} from "./components/zombiegotchi/controls/controls.component";
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
+		ZombiegotchiComponent,
+		ZombieComponent,
+		ControlsComponent
 	],
 	imports: [
 		BrowserModule,

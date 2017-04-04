@@ -1,0 +1,8 @@
+<div>
+	<div>
+		<app-zombie [isSick]="isZombieSick"></app-zombie>
+	</div>
+	<div>
+		<app-controls (giveMedicineEvent)="giveMedicine($event)"></app-controls>
+	</div>
+</div>
