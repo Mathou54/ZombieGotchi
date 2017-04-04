@@ -19,7 +19,7 @@ before_install:
 
 script:
   - npm test -- --single-run
-  - npm run build -- --aot --prod
 
 after_success:
+  - npm run build -- --aot --prod
   - npm run deploy -- --token=$FIREBASE_KEY
