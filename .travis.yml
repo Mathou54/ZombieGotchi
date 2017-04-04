@@ -19,4 +19,4 @@ before_install:
 
 script:
   - npm test -- --single-run
-  - npm build
+  - npm build -- --aot --prod
