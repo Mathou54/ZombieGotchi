@@ -20,3 +20,11 @@ before_install:
 script:
   - npm test -- --single-run
   - npm run build -- --aot --prod
+
+deploy:
+  provider: heroku
+  api_key: $HEROKU_KEY
+  skip_cleanup: true
+  app: zombiegotchi
+  on:
+    all_branches: true
