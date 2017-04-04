@@ -21,8 +21,5 @@ script:
   - npm test -- --single-run
   - npm run build -- --aot --prod
 
-deploy:
-  provider: firebase
-  token: $FIREBASE_KEY
-  on:
-    all_branches: true
+after_success:
+  - npm run deploy -- --token=$FIREBASE_KEY
