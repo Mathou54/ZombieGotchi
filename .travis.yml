@@ -25,6 +25,7 @@ after_success:
 
 deploy:
   provider: script
+  skip_cleanup: true
   script:
     - npm run deploy -- --token=$FIREBASE_KEY
   on:
