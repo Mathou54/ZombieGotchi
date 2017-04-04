@@ -24,7 +24,6 @@ script:
 deploy:
   provider: heroku
   api_key: $HEROKU_KEY
-  local_dir: dist
   app: zombiegotchi
   on:
     all_branches: true
