@@ -23,8 +23,8 @@ script:
 
 deploy:
   provider: firebase
-  api_key: $FIREBASE_KEY
+  token: $FIREBASE_KEY
   local_dir: dist
-  app: zombiegotchi
+  project: zombiegotchi-a8c9b
   on:
     all_branches: true
