@@ -24,7 +24,5 @@ script:
 deploy:
   provider: firebase
   token: $FIREBASE_KEY
-  local_dir: dist
-  project: zombiegotchi-a8c9b
   on:
     all_branches: true
