@@ -22,8 +22,9 @@ script:
   - npm run build -- --aot --prod
 
 deploy:
-  provider: heroku
-  api_key: $HEROKU_KEY
+  provider: firebase
+  api_key: $FIREBASE_KEY
+  local_dir: dist
   app: zombiegotchi
   on:
     all_branches: true
