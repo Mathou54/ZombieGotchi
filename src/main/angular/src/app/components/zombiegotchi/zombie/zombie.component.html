@@ -1,6 +1,19 @@
 <div>
-	<div>Zombie</div>
-	<div>
-		<span *ngIf="zombie?.states?.isSick">sick</span>
+	<div class="row text-center">
+		<h1 class="col-md-12">{{zombie.name}}</h1>
+	</div>
+	<div class="row text-center justify-content-center">
+		<div class="zombie-card col-md-3 rounded-circle card">
+			<div class="row">
+				<div class="col-md-12">
+					zed
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<span *ngIf="zombie?.states?.isSick">sick</span>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
