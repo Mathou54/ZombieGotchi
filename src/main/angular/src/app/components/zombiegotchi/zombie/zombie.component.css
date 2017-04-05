@@ -1,0 +1,7 @@
+.zombie-card {
+	/* Height of the gotchi border */
+	height: 20rem;
+
+	/* Border */
+	border: thick darkred;
+}
