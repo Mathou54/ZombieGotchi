@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from "@angular/core";
+import {Zombie} from "../../../model/zombie";
 
 @Component({
 	selector: 'app-zombie',
@@ -7,7 +8,7 @@ import {Component, Input, OnInit} from "@angular/core";
 })
 export class ZombieComponent implements OnInit {
 
-	@Input() isSick: boolean;
+	@Input() zombie: Zombie;
 
 	constructor() {
 	}

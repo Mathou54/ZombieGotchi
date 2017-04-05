@@ -1,4 +1,5 @@
-import {Component, EventEmitter, OnInit, Output} from "@angular/core";
+import {Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
+import {ZombieStates} from "../../../model/zombie-states";
 
 @Component({
 	selector: 'app-controls',
@@ -7,7 +8,9 @@ import {Component, EventEmitter, OnInit, Output} from "@angular/core";
 })
 export class ControlsComponent implements OnInit {
 
-	@Output() giveMedicineEvent: EventEmitter<any> = new EventEmitter();
+	@Input() states: ZombieStates;
+
+	@Output() event: EventEmitter<ZombieStates> = new EventEmitter();
 
 	constructor() {
 	}
@@ -16,7 +19,8 @@ export class ControlsComponent implements OnInit {
 	}
 
 	public giveMedicine(): void {
-		this.giveMedicineEvent.emit(true);
+		this.states.isSick = false;
+		this.event.emit(this.states);
 	}
 
 }
