@@ -6,3 +6,7 @@
 	border-width: thick;
 	border-color: darkred;
 }
+
+.zombie-row {
+	height: 100%;
+}

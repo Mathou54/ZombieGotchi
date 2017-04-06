@@ -28,7 +28,11 @@ export class ZombiegotchiComponent implements OnInit {
 	}
 
 	private startTimeout(func: () => void): any {
-		return setTimeout(func, 1000);
+		return setTimeout(func, this.getRandomTime());
+	}
+
+	private getRandomTime(): number {
+		return Math.round(Math.random() * 60000);
 	}
 
 	private startSick(): void {
