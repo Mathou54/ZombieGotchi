@@ -41,6 +41,7 @@ export class ZombiegotchiComponent implements OnInit {
 		}
 		this.timers['sick'] = this.startTimeout(() => {
 			this.zombie.states.isSick = true;
+			this.ZombieChanged();
 		});
 	}
 
@@ -50,11 +51,16 @@ export class ZombiegotchiComponent implements OnInit {
 		}
 		this.timers['hunger'] = this.startTimeout(() => {
 			this.zombie.states.isHungry = true;
+			this.ZombieChanged();
 		});
 	}
 
 	public updateZombieStates(states: ZombieStates): void {
 		this.zombie.states = states;
 		this.startLife();
+	}
+
+	private ZombieChanged() {
+		this.zombie.states.happy--;
 	}
 }

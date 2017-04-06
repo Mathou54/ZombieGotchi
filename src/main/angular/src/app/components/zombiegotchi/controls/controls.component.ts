@@ -28,4 +28,9 @@ export class ControlsComponent implements OnInit {
 		this.event.emit(this.states);
 	}
 
+	public giveGift(): void {
+		this.states.happy++;
+		this.event.emit(this.states);
+	}
+
 }
