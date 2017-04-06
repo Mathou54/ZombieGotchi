@@ -6,13 +6,27 @@
 		<div class="zombie-card col-md-3 rounded-circle card">
 			<div class="row zombie-row">
 				<div class="zombie-states-left col-3 align-self-center">
-					<span *ngIf="zombie?.states?.isSick">sick</span>
+					<div class="row">
+						<div class="col-12">
+							<span *ngIf="zombie?.states?.isSick">Sick</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<span *ngIf="zombie?.states?.isHungry">Hungry</span>
+						</div>
+					</div>
 				</div>
 				<div class="zombie-image col-6 align-self-center">
 					<img src="assets/zombie/zombie.gif">
 				</div>
 				<div class="zombie-states-right col-3 align-self-center">
-					<span *ngIf="zombie?.states?.isHungry">hungry</span>
+					<div class="row">
+						<div class="col-12">
+							<span *ngIf="zombie?.states?.happy < 0">Sad</span>
+							<span *ngIf="zombie?.states?.happy > 0">Happy</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
