@@ -23,4 +23,9 @@ export class ControlsComponent implements OnInit {
 		this.event.emit(this.states);
 	}
 
+	public giveFood(): void {
+		this.states.isHungry = false;
+		this.event.emit(this.states);
+	}
+
 }

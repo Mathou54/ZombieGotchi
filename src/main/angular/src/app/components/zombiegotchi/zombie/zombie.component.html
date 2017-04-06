@@ -9,9 +9,16 @@
 					zed
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<span *ngIf="zombie?.states?.isSick">sick</span>
+			<div class="states">
+				<div class="row">
+					<div class="col-md-12">
+						<span *ngIf="zombie?.states?.isSick">sick</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<span *ngIf="zombie?.states?.isHungry">hungry</span>
+					</div>
 				</div>
 			</div>
 		</div>
